@@ -29,13 +29,5 @@ engy_alfa_d=decimate(eeg_f.^2,8);
 t_d = ((0:length(engy_alfa_d) - 1)./fs).*8;
 plotCompleto([0 t_d(end) (min(engy_alfa_d) - 10) (max(engy_alfa_d) + 10)], 't[s]', 'Amplitúd', 'Encefalograma diezmado', 20, 'r', 1.5, t_d, engy_alfa_d);
 
-z = filter(ones(1,16)/16,1,engy_alfa_d);
+z = filter(ones(1,16),1,engy_alfa_d);
 plotCompleto([0 t_d(end) min(z) max(z)], 't', '', 'Ritmo \alpha filt+diez', 20, 'r', 1.5, t_d, z);
-
-
-%engy_alfa=eeg_f.^2;
-engy_alfa=decimate(eeg_f.^2,16);
-z=filter(ones(1,80),1,engy_alfa);
-tt=(0:length(z)-1).*(16/256);
-plotCompleto([0 tt(end) 0 max(z)], 't', '', 'Ritmo \alpha', 20, 'r', 1.5, tt, z);
-
