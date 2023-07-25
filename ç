@@ -1,5 +1,6 @@
-# Práctica con Utilitario 2 - Opción B: Se˜nales Biomédicas
-Proyecto de Análisis de Encefalograma y Electrocardiograma en Frecuencia
+¡Por supuesto! A continuación, te proporciono un ejemplo de un `README.md` que puedes usar como plantilla para tu proyecto de análisis de encefalograma y electrocardiograma en frecuencia con MATLAB:
+
+# Proyecto de Análisis de Encefalograma y Electrocardiograma en Frecuencia
 
 ![Imagen de encabezado](ruta_de_la_imagen.png)
 
@@ -9,7 +10,7 @@ Este proyecto tiene como objetivo realizar el análisis en frecuencia de señale
 
 ## Requisitos Previos
 
-- MATLAB (compatible con fdatool) instalado en tu computadora.
+- MATLAB (versión X.X o superior) instalado en tu computadora.
 
 ## Estructura del Proyecto
 

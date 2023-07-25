@@ -17,7 +17,7 @@ stemCompleto([-fs/2 fs/2 abs(min(EEG)) 3e6],'f [Hz]', '', '|EEG|', 20, 'b.-', 1,
 
 %% Filtro pasabanda y ritmo alfa
 % save('.\filtros\filtroBP_8-13.mat','BP');
-load('.\filtros\filtroBP_8-13.mat');
+load('./filtros/filtroBP_8-13.mat');
 
 eeg_f=filter(BP,eeg);
 plotCompleto([0 t(end) (min(eeg_f) - 10) (max(eeg_f) + 10)], 't[s]', 'Amplitud', 'Encefalograma filtrado', 20, 'r-', 1, t, eeg_f);
