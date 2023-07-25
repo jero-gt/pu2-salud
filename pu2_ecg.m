@@ -6,8 +6,8 @@ load('ecg.mat');
 fs=500;
 t1=(0:length(ecg_limpia)-1)./500;
 plotCompleto([0 max(t1) min(ecg_limpia) 7e-4], 't [s]', 'Amplitud', 'Electrocardiograma ideal', 20, 'r', 1.5, t1, ecg_limpia);
-% [ECGz,ECGz_shift,f_li]=fft_kit(ecg_limpia,fs);
-% stemCompleto([-fs/2 fs/2 abs(min(ECGz)) 0.2],'f [Hz]', '', '|ECG_l|', 20, 'b.-', 1, f_li, abs(ECGz_shift));
+[ECGz,ECGz_shift,f_li]=fft_kit(ecg_limpia,fs);
+stemCompleto([-fs/2 fs/2 abs(min(ECGz)) 0.2],'f [Hz]', '', '|ECG_l|', 20, 'b.-', 1, f_li, abs(ECGz_shift));
 
 load('ecg_contaminada.mat');
 t2=((0:length(ecg_contaminada)-1)./fs);
@@ -28,7 +28,7 @@ ecg_fBS = filter(BS, ecg_fLP);
 stemCompleto([-fs/2 fs/2 abs(min(ECG_fBS)) 0.2],'f [Hz]', 'Amplitud', '|EEG_fBP|', 20, 'b.-', 1, f_cont, abs( ECG_fBS_shift));
 
 
-%plotCompleto([0 max(t2) min(ecg_fBS) 7e-4], 't [s]', 'Amplitud', 'Electrocardiograma filtrado', 20, 'r', 1.5, t2, ecg_fBS);
+plotCompleto([0 max(t2) min(ecg_fBS) 7e-4], 't [s]', 'Amplitud', 'Electrocardiograma filtrado', 20, 'r', 1.5, t2, ecg_fBS);
 
 
 

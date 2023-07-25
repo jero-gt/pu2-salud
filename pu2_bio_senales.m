@@ -16,8 +16,8 @@ stemCompleto([-fs/2 fs/2 abs(min(EEG)) 3e6],'f [Hz]', '', '|EEG|', 20, 'b.-', 1,
 %revisar si los ponemos en una misma figura o no
 
 %% Filtro pasabanda y ritmo alfa
-% save('filtroBP_8-13.mat','BP');
-load('filtroBP_8-13.mat');
+load('./filtros/filtroBP_8-13.mat');
+save('./filtros/filtroBP_8-13.mat','BP');
 
 eeg_f=filter(BP,eeg);
 plotCompleto([0 t(end) (min(eeg_f) - 10) (max(eeg_f) + 10)], 't[s]', 'Amplitud', 'Encefalograma filtrado (IIR)', 20, 'r-', 1, t, eeg_f);
@@ -34,7 +34,7 @@ e_y=decimate(eeg_f.^2,16);
 t_d = ((0:length(e_y) - 1)./fs).*16;
 plotCompleto([0 t_d(end) -1 (max(e_y) + 5)], 't[s]', 'Amplitud', 'Energía del encefalograma diezmado', 20, 'r', 1.5, t_d, e_y);
 
-vent=80
-z = filter(ones(1,vent),1,e_y);
-plotCompleto([0 t_d(end) -1 (max(z) + 5)], 't[s]', 'Amplitud', 'Energía EEG filt + dz (80)', 20, 'r', 1.5, t_d, z);
+% vent=80;
+% z = filter(ones(1,vent),1,e_y);
+% plotCompleto([0 t_d(end) -1 (max(z) + 5)], 't[s]', 'Amplitud', 'Energía EEG filt + dz (80)', 20, 'r', 1.5, t_d, z);
 
