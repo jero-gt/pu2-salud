@@ -11,8 +11,8 @@ t=(0:length(eeg)-1)./fs;
 plotCompleto([0 t(end) (min(eeg) - 10) (max(eeg) + 10)], 't[s]', 'Amplitud', 'Encefalograma', 20, 'r', 1.5, t, eeg);
 
 [EEG_s,f]=fft_kit(eeg,fs);	%EEG_s = fftshift(fft(EEG)), de ahora en mas adoptaremos el sunindice _s para refernirnos a _shift
-stemCompleto([-fs/2 fs/2 abs(min(EEG)) 6.5e4],'f [Hz]', '', '|EEG|', 20, 'b.-', 1, f, abs(EEG_s));
-stemCompleto([-fs/2 fs/2 abs(min(EEG)) 3e6],'f [Hz]', '', '|EEG|', 20, 'b.-', 1, f, abs(EEG_s));
+stemCompleto([-fs/2 fs/2 abs(min(EEG_s)) 6.5e4],'f [Hz]', '', '|EEG|', 20, 'b.-', 1, f, abs(EEG_s));
+stemCompleto([-fs/2 fs/2 abs(min(EEG_s)) 3e6],'f [Hz]', '', '|EEG|', 20, 'b.-', 1, f, abs(EEG_s));
 %revisar si los ponemos en una misma figura o no
 
 %% Filtro pasabanda y ritmo alfa
@@ -23,7 +23,7 @@ eeg_f=filter(BP,eeg);
 plotCompleto([0 t(end) (min(eeg_f) - 10) (max(eeg_f) + 10)], 't[s]', 'Amplitud', 'Encefalograma filtrado', 20, 'r-', 1, t, eeg_f);
 
 [EEG_f_s, ~] = fft_kit(eeg_f, fs);
-stemCompleto([-fs/2 fs/2 abs(min(EEG_f)) 6.5e4],'f [Hz]', '', '|EEG_f|', 20, 'b.-', 1, f, abs(EEG_f_s));
+stemCompleto([-fs/2 fs/2 abs(min(EEG_f_s)) 6.5e4],'f [Hz]', '', '|EEG_f|', 20, 'b.-', 1, f, abs(EEG_f_s));
 
 
 %% RITMO ALFA
