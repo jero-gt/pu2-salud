@@ -26,7 +26,6 @@ load('.\filtros\filtroBP_8-13.mat');
 eeg_f=filter(BP,eeg);
 plotCompleto([0 t(end) min(eeg_f)*1.1 max(eeg_f)*1.1], 't[s]', '', 'Encefalograma filtrado', 20, 'r-', 0.5, t, eeg_f);
 
-plotFiltros(BP, f,fs,[-25 25 0 1.2],'Filtro PB 8-13');
 [EEG_f_s, ~] = fft_kit(eeg_f, fs);
 stemCompleto([-fs/2 fs/2 0 5e4],'f [Hz]', '', '|EEG_f|', 20, 'b.-', 1, f, abs(EEG_f_s));
 
@@ -48,6 +47,10 @@ z = filter(ones(1,vent),1,e_y);
 plotCompleto([0 t_d(end) 0 max(z)*1.1 ], 't[s]', '', 'Parpadeos', 20, 'r', 1.5, t_d, z);
 
 
+%% PRUEBA
+[num_BP, den_BP] = tf(BP);
+[h_BP, w_BP] = freqz(num_BP, den_BP,f , fs);
+plot(w_BP, abs(h_BP));
 
 
 
