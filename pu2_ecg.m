@@ -18,22 +18,18 @@ stemCompleto([-fs/2 fs/2 abs(min(ECG_s)) 0.2],'f [Hz]', '', '|ECG_{cont}|', 20, 
 
 %% FILTRO PASABAJOS
 load('filtroLP_100');
+plotFiltros(LP, f_cont, fs, [-fs/2 fs/2 0 1.5], "Filtro LP 100Hz");
+
 ecg_fLP = filter(LP, ecg_contaminada);
 [ECG_fLP_s, ~] = fft_kit(ecg_fLP,fs);
 stemCompleto([-fs/2 fs/2 abs(min(ECG_fLP_s)) 0.2],'f [Hz]', '', '|ECG_{fPB}|', 20, 'b.-', 1, f_cont, abs(ECG_fLP_s));
 
 %% FILTRO RECHAZABANDA
 load('filtroBS_49-53');
+plotFiltros(BS, f_cont, fs, [-100 100 0 1.5], "Filtro RB 49Hz-53Hz");
+
 ecg_fBS = filter(BS, ecg_fLP);
 [ECG_fBS_s, ~] = fft_kit(ecg_fBS,fs);
 stemCompleto([-fs/2 fs/2 abs(min(ECG_fBS_s)) 0.2],'f [Hz]', '', '|ECG_{fRB}|', 20, 'b.-', 1, f_cont, abs(ECG_fBS_s));
 
-
 plotCompleto([0 max(t2) min(ecg_fBS) 7e-4], 't [s]', '', 'ecg filtrado', 20, 'r', 1.5, t2, ecg_fBS);
-
-
-
-
-
-
-
