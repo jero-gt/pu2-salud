@@ -1,7 +1,7 @@
 # Práctica con Utilitario 2 - Opción B: Se˜nales Biomédicas
 Proyecto de Análisis de Encefalograma y Electrocardiograma en Frecuencia
 
-![Imagen de encabezado](ruta_de_la_imagen.png)
+![Imagen de encabezado](./figuras/encabezado.jpg)
 
 ## Descripción del Proyecto
 
