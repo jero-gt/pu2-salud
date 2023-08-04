@@ -1,11 +1,6 @@
 function plotDoble(lim_ejes1,lim_ejes2, eje_x, eje_y, titulo1, titulo2, tam_letra, col, grosor, n1, x1, n2, x2)
-    % plotCompleto(lim_ejes,eje_x,eje_y,titulo,tam_letra,col,grosor,t,x)
-    %
-    % Realiza un gr ?afico de una SVIC de manera adecuada.
-    % Ejemplo de uso:
-    % t = -40:0.01:40;
-    % xa = -2*sin(-0.2*t + 5/3*pi);
-    % plotCompleto([t(1) t(end) -2 2],'t','f(t)','Se~nal f(t)',20,'r*-',1.5,t,xa)
+       %plotDoble(lim_ejes1,lim_ejes2, eje_x, eje_y, titulo1, titulo2, tam_letra, col, grosor, n1, x1, n2, x2)
+    
     figure('units','normalized','outerposition',[0 0 1 1],'Name', titulo1, 'NumberTitle', 'off'); % Creo y maximizo figura.
 
     subplot(2,1,1);

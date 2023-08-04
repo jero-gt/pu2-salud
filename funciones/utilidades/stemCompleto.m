@@ -10,7 +10,7 @@ function stemCompleto(lim_ejes,eje_x,eje_y,titulo,tam_letra,col,grosor,n,x)
     figure('units','normalized','outerposition',[0 0 1 1],'Name', titulo, 'NumberTitle', 'off'); % Creo y maximizo figura.
     stem(n, x, col, 'filled', 'Linewidth', grosor); % Grafico. Color (y marcador) y grosor.
     axis(lim_ejes);
-    %grid on
+    grid off;
     set(gca,'FontSize', tam_letra); % Tama~no de letra para la leyenda y ejes.
     xlabel(eje_x,'Interpreter','Latex'); % Nombro el eje x.
     ylabel(eje_y,'Interpreter','Latex'); % Nombro el eje y.
