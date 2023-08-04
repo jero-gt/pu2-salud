@@ -47,7 +47,7 @@ t_d = ((0:length(e_y) - 1)./fs).*dz;
 vent=80; %ventana de promedio movil
 z = filter(ones(1,vent),1,e_y);
 
-plotDoble([0 t_d(end) 0 max(e_y)*1.1],[0 t_d(end) 0 max(z)*1.1 ],'t[s]', '', 'Energía del encefalograma diezmado', 'Parpadeos',20, 'r', 1.5, t_d, e_y,t_d, z);
+plotDoble([0 t_d(end) 0 max(e_y)*1.1],[0 t_d(end) 0 max(z)*1.1 ],'t[s]', '', 'Energía EEG diezmado', 'Parpadeos',20, 'r', 1.5, t_d, e_y,t_d, z);
 
 
 
