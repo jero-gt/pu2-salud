@@ -18,7 +18,6 @@ stemDoble([-fs/2 fs/2 abs(min(ECG_s)) 0.2],[-fs/2 fs/2 abs(min(ECG_s)) 0.2], 'f 
 
 
 %% FILTRO PASABAJOS
-% save('./filtros/filtroLP_100','LP')
 load('filtroLP_100');
 plotFiltros(LP, f_cont, fs, [-fs/2 fs/2 0 1.5], "Filtro LP 100Hz");
 
@@ -27,10 +26,11 @@ ecg_fLP = filter(LP, ecg_contaminada);
 stemCompleto([-fs/2 fs/2 abs(min(ECG_fLP_s)) 0.2],'f [Hz]', '', '|ECG_{fLP}|', 20, 'b.-', 1, f_cont, abs(ECG_fLP_s));
 
 %plotCompleto([0 max(t2) min(ecg_contaminada) 7.5e-4], 't [s]', '', 'ecg contaminado', 20, 'r', 1.5, t2, ecg_contaminada);
-plotStem([0 max(t2) min(ecg_contaminada) 7.5e-4], [-fs/2 fs/2 abs(min(ECG_s)) 0.2], 't [s]', '', 'f [Hz]', '', "ECG filtrada", "Escpectro ECG filtrado", 20, 'b.-', 1.5, t2, ecg_fLP, f_cont, abs(ECG_fLP_s))
+plotStem([0 max(t2) min(ecg_contaminada) 7.5e-4], [-fs/2 fs/2 abs(min(ECG_s)) 0.2], 't [s]', 'Amplitud', 'f [Hz]', 'Amplitud', "ECG filtrada", "Escpectro ECG filtrado", 20, 'b.-', 1.5, t2, ecg_fLP, f_cont, abs(ECG_fLP_s))
 
 
 %% FILTRO RECHAZABANDA
+save('./filtros/filtroLP_100','LP')
 load('filtroBS_49-53');
 plotFiltros(BS, f_cont, fs, [-100 100 0 1.5], "Filtro RB 49Hz-53Hz");
 
