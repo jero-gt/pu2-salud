@@ -15,8 +15,7 @@ plotCompleto([0 t(end) (min(eeg) - 10) (max(eeg) + 10)], 't[s]', '', 'Encefalogr
 stemCompleto([-fs/2 fs/2 abs(min(EEG_s)) 3e6],'f [Hz]', '', '|EEG|', 20, 'b.-', 1, f, abs(EEG_s));
 
 stemCompleto([-fs/2 fs/2 abs(min(EEG_s)) 6.5e4],'f [Hz]', '', '|EEG|', 20, 'b.-', 1, f, abs(EEG_s));
-xticks([-100, -50, -13, 0, 13, 50, 100])
-xticklabels({'-100', '-50','-13', '0', '13', '50', '100'})
+xticks([-100, -50, -13, 0, 13, 50, 100]);xticklabels({'-100', '-50','-13', '0', '13', '50', '100'})
 
 
 %% Filtro pasabanda y ritmo alfa
