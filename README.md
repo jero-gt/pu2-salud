@@ -53,8 +53,9 @@ pu2/
 
 ## Autores:
 
+- Nombre: Ignacio Brittez
+- Correo electrónico: ibrittez3@alu.ing.unlp.edu.ar
+
 - Nombre: Jeronimo Gomez Tantarelli
 - Correo electrónico: jeronimogomeztantarelli@yahoo.com.ar
 
-- Nombre: Ignacio Brittez
-- Correo electrónico: ibrittez3@alu.ing.unlp.edu.ar
