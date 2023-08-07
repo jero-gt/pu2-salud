@@ -1,7 +1,7 @@
 # Práctica con Utilitario 2 - Opción B: Se˜nales Biomédicas
 Proyecto de Análisis de Encefalograma y Electrocardiograma en Frecuencia
 
-![Imagen de encabezado](./figuras/encabezado.jpg)
+![Imagen de encabezado](./funciones/encabezado.jpg)
 
 ## Descripción del Proyecto
 
@@ -53,8 +53,9 @@ pu2/
 
 ## Autores:
 
+- Nombre: Ignacio Brittez
+- Correo electrónico: ibrittez3@alu.ing.unlp.edu.ar
+
 - Nombre: Jeronimo Gomez Tantarelli
 - Correo electrónico: jeronimogomeztantarelli@yahoo.com.ar
 
-- Nombre: Ignacio Brittez
-- Correo electrónico: ibrittez3@alu.ing.unlp.edu.ar
